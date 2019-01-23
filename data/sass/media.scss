@@ -1,0 +1,39 @@
+// mixin media queries functions
+@mixin mediaMaxWidth($mediaMaxWidth,$orientation){
+  @media only screen and (max-width: $mediaMaxWidth) and (orientation: $orientation){
+    @content;
+  }
+}
+@mixin mediaMinWidth($mediaMinWidth,$orientation){
+  @media only screen and (min-width: $mediaMinWidth) and (orientation: $orientation){
+    @content;
+  }
+}
+
+@include mediaMaxWidth(1200px, portrait){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+  } 
+}
+@include mediaMaxWidth(992px, portrait){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+  } 
+}
+@include mediaMaxWidth(768px, portrait){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+  } 
+}
+@include mediaMaxWidth(576px, portrait){
+  .topIcons{
+    position: relative!important;
+    right: 20px!important;
+    .header-icons-noti {
+      right: 45px!important;
+    }
+  } 
+}

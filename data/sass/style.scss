@@ -1,0 +1,438 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Italic;
+  src: url('../fonts/montserrat/Montserrat-Italic.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url('../fonts/montserrat/Montserrat-Black.ttf'); 
+}
+
+button{
+  outline: none!important;
+}
+
+.navbar{
+  border-radius: 0;
+  transition: all 0.3s ease-out;
+  padding: 20px;
+  background: white;
+  .topIcons{
+    .linedivide1 {
+      color: #e5e5e5;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    li{
+      display: inline;
+      list-style: none;
+      .header-icons-noti {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #111111;
+        color: white;
+        font-family: Montserrat-Medium;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        
+      }
+      .navbar-toggler{
+        margin-left: 10px;
+      }
+    }
+  }
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+    top: 25px;
+    min-width: 250px;
+    width: 100%;
+    right: 0px;
+    left: auto;
+    
+  }
+  .dropdown>.dropdown-toggle:active {
+    pointer-events: none;   // Add this, to prevent clicking dropdown's default click function
+  }
+  .cartList{
+    padding: 10px;
+    .productBrand{
+      color: #e65540;
+      font-family: montserrat-regular;
+    }
+    .productCount{
+      background: none;
+      border: none;
+      text-align: right;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .totalSum{
+    text-align: right;
+    padding: 0 20px;
+  }
+  .basket-btn{
+    a{
+      background: rgba($color: #e65540, $alpha: .7);
+      padding: 5px 20px;
+      color: #000;
+      border-radius: 20px;
+      transition: all .35s;
+      &:hover{
+        color: #fff;
+        background: #e65540;
+      }
+    }
+  }
+  .navbar-brand{
+    color: #333333
+  }
+  .nav{
+    .nav-link{
+      margin: 0 10px;
+      color: #333333;
+      font-family: Montserrat-Regular;
+      transition: all .35s;
+      border-bottom: 1px solid transparent;
+      &:hover{
+        border-bottom: 1px solid #333333;
+      }
+    }
+  }
+}
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  &.navbar {
+    padding: 5px 20px;
+    box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    -o-box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    -ms-box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2); 
+  }
+}
+/* fixed to top styles */
+
+a{
+  text-decoration: none!important;
+}
+.topbar{
+  height: 45px;
+  background-color: #f5f5f5;
+  &-social{
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    &-item{
+      text-decoration: none;
+      font-size: 18px;
+      color: #888888;
+      padding: 10px;
+      &:hover{
+        color: #333;
+      }
+    }
+  }
+  &-child1 {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    color: #888888;
+    margin-top: 10px;
+  }
+  .currency{
+    padding: 8px;
+    select{
+      padding-left: 10px;
+      width: 80px;
+    }
+  }
+}
+
+// section1 style
+.slide1{
+  width: 100%;
+  height: 100%;
+  .carousel-inner{
+    width: 100%;
+    height: 100%;
+    img{
+      object-fit: cover;
+      height: 600px;
+      width: 100%;
+    }
+  }
+  .carousel{
+    &-prev,&-next{
+      position: absolute!important;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+    }
+    &-caption{
+      position: absolute;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      p.md-text1{
+        font-family: Montserrat-Regular;
+        color: white;
+        line-height: 1.5;
+        letter-spacing: 2px;
+      }
+      h1.xl-text1{
+        font-family: Montserrat-Bold;
+        color: white;
+        line-height: 1.2;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+  }
+  .carousel-control-next-icon{
+    background-image: url(../images/icons/next.png);
+  }
+  .carousel-control-next-icon,.carousel-control-prev-icon{
+    width: 40px;
+    height: 40px;
+    background-size: 60%; 
+    border-radius: 50%; 
+    transition: all 0.2s;
+    background-color: rgba(0,0,0,0.6);
+    &:hover{
+      background-color: rgba($color: red, $alpha: .6);
+    }
+  }
+  .carousel-control-prev-icon{
+    background-image: url(../images/icons/next.png);
+    transform: rotate(180deg)
+  }
+}
+
+// section two
+.newProducts{
+  padding: 50px 0; 
+  &-title{
+    text-align: center;
+    font-family: Montserrat-Bold;
+    font-size: 30px;
+    color: #222222;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  .cardImageBlock{
+    overflow: hidden;
+    .card-img-top{
+      width: 100%;
+      transition: all 0.35s;
+      &:hover{
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .newIcon{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    z-index: 100;
+    font-family: Montserrat-Regular;
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: default;
+    background: #66a8a6;
+  }
+}
+
+
+// mixin media queries functions
+@mixin mediaMaxWidth($mediaMaxWidth,$orientation){
+  @media only screen and (max-width: $mediaMaxWidth) and (orientation: $orientation){
+    @content;
+  }
+}
+@mixin mediaMinWidth($mediaMinWidth,$orientation){
+  @media only screen and (min-width: $mediaMinWidth) and (orientation: $orientation){
+    @content;
+  }
+}
+@include mediaMinWidth(1200px, landscape){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+    .header-icons-noti{
+      right: -10px;
+    }
+  }
+  .carousel{
+    &-prev{
+      left: 40px;
+    }
+    &-next{
+      right: 40px;
+    }
+    &-caption{
+      width: 100%;
+    }
+  } 
+  .md-text1{
+    font-size: 18px;
+  }
+  .xl-text1{
+    font-size: 60px;
+  }
+}
+@include mediaMaxWidth(1200px, landscape){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+    .header-icons-noti{
+      right: -10px;
+    }
+  } 
+  .carousel{
+    &-prev{
+      left: 40px;
+    }
+    &-next{
+      right: 40px;
+    }
+    &-caption{
+      width: 100%;
+    }
+  }
+  .md-text1{
+    font-size: 18px;
+  }
+  .xl-text1{
+    font-size: 60px;
+  }
+}
+@include mediaMaxWidth(992px, landscape){
+  .topIcons{
+    position: relative;
+    right: 50px;
+  } 
+  .navbar-brand + .mx-auto{
+  }
+  .card{
+    &-title,&-text{
+      font-size: 0.7rem;
+    }
+  }
+  .carousel{
+    &-prev{
+      left: 30px;
+    }
+    &-next{
+      right: 30px;
+    }
+    &-caption{
+      width: 90%;
+    }
+  }
+  .md-text1{
+    font-size: 16px;
+  }
+  .xl-text1{
+    font-size: 40px;
+  }
+}
+@include mediaMaxWidth(768px, landscape){
+  .topIcons{
+    position: absolute;
+    right: 50px;
+  } 
+  .navbar-brand + .mx-auto{
+  }
+  .carousel{
+    &-prev{
+      left: 20px;
+    }
+    &-next{
+      right: 20px;
+    }
+    &-caption{
+      width: 60%;
+    }
+  }
+  .md-text1{
+    font-size: 16px;
+  }
+  .xl-text1{
+    font-size: 35px;
+  }
+}
+@include mediaMaxWidth(576px, portrait){
+  .topIcons{
+    position: relative;
+    right: 20px;
+    .header-icons-noti {
+      right: -8px;
+    }
+  } 
+  .navbar-brand + .mx-auto{
+  }
+  .carousel{
+    &-prev{
+      left: 10px;
+    }
+    &-next{
+      right: 10px;
+    }
+    &-caption{
+      width: 70%;
+      
+    }
+  }
+  .md-text1{
+    font-size: 14px;
+  }
+  .xl-text1{
+    font-size: 25px;
+  }
+}

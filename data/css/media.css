@@ -1,0 +1,29 @@
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
+  .topIcons {
+    position: absolute;
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  .topIcons {
+    position: absolute;
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .topIcons {
+    position: absolute;
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  .topIcons {
+    position: relative !important;
+    right: 20px !important;
+  }
+  .topIcons .header-icons-noti {
+    right: 45px !important;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
