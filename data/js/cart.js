@@ -2,21 +2,25 @@ var data = [{
   id: 1,
   brand: 'product1',
   price: 100000,
+  //Image: "/data/images/3.jpg"
   Image: "/shirtShop.github.io/data/images/3.jpg"
 },{
   id: 2,
   brand: 'product2',
   price: 145000,
+  //Image: '/data/images/4.jpg'
   Image: '/shirtShop.github.io/data/images/4.jpg'
 },{
   id: 3,
   brand: 'product3',
   price: 132000,
+  //Image: '/data/images/5.jpg'
   Image: '/shirtShop.github.io/data/images/5.jpg'
 },{
   id: 4,
   brand: 'product4',
   price: 99900,
+  //Image: '/data/images/6.jpg'
   Image: '/shirtShop.github.io/data/images/6.jpg'
 }];
 
@@ -24,8 +28,9 @@ var data = [{
 angular.module('shirtShop', ['ngAnimate']);
 var app = angular.module("shirtShop", []);
 
-app.controller("productController", ["$scope", function ($products,$http) {
+app.controller("productController", ["$scope", function ($products,) {
   $products.product = data;
+  
       // define list of items
   // $product.productBrand = productBrand;
 	// $product.productColor = productColor;
@@ -65,7 +70,8 @@ app.controller('cart', function ($scope) {
   };
 	
   $scope.getCost = function(item) {
-    return item.count * item.price;
+    return (item.count * item.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    
   };
 
   $scope.addItem = function (product) {
@@ -91,14 +97,14 @@ app.controller('cart', function ($scope) {
   $scope.getTotal = function() {
     var total = 0;
     angular.forEach($scope.cart, function(item) {
-      if ($('.delivery').value === 'express') {
-        total += (item.price * item.count)+15000;
-      }
-      else{
+      // if ($('.delivery').value === 'express') {
+      //   total += (item.price * item.count)+15000;
+      // }
+      // else{
         total += item.price * item.count;
-      }
+      //}
     })
-    return total;
+    return total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     saveCart();
   }
   app.filter('nospace', function () {

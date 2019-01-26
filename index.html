@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="data/images/logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="data/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -16,12 +17,13 @@
   <link rel="stylesheet" href="data/css/style.css">
   <script src="data/js/index.js"></script>
   <script src="data/js/cart.js"></script>
+  
 </head>
 <body ng-controller="cart as cart">
   <div ng-controller="productController">
     <!-- header -->
     <ul class="nav topbar">
-      <li class="nav-item">
+      <li class="nav-item social-items">
         <div class="topbar-social">
           <a href="#" class="topbar-social-item fa fa-facebook"></a>
           <a href="#" class="topbar-social-item fa fa-instagram"></a>
@@ -79,7 +81,7 @@
               </li>
             </ul>
             <h5 class="dropdown-header">Dropdown header</h5>
-            <p class="totalSum">Total: {{ getTotal() + ' sum'}}</p>
+            <p class="totalSum">Total: {{ getTotal() + ' сўм'}}</p>
             <hr>
             <p class="text-center basket-btn">
               <a href="basket.html"> Savatchani tekshirish </a>
@@ -158,13 +160,13 @@
                 <img class="card-img-top" ng-src="{{product.Image}}" alt="Card image">
               </div>
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-8 col-xs-8">
+                <div class="row row-no-padding">
+                  <div class="col-md-9 col-sm-8 col-xs-8">
                     <h5 class="card-title">{{ product.brand }}</h4>
-                    <p class="card-text">{{ product.price + ' sum' }}</p>
+                    <p class="card-text">{{ product.price + ' сўм' }}</p>
                   </div>
-                  <div class="col-sm-4 col-xs-4">
-                    <button class="btn btn-primary btn-sm" ng-click="addItem(product)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  <div class="col-md-3 col-sm-4 col-xs-4">
+                    <button class="btn btn-primary btn-sm block2-btn-addcart" ng-click="addItem(product)"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -173,40 +175,226 @@
         </div>
       </div>
     </section>
-    <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </pre>
+    <!-- section matolar  -->
+    <section class="fabrics">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="fabricsCatalog">
+              <div class="overlay"></div>
+              <img src="data/images/Huntsman-Savile-Row-Shop-Shirts-Image-2-768x549.jpg" alt="">
+              <div class="fabricsCatalogCaption">
+                <h4>Матолар</h4>
+                <h1>Олами</h1>
+                <p class="seeMoreFabrics"><a href="#">Тамоша қилинг</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="fabricsCatalog">
+              <!-- <img src="data/images/6.jpg" alt=""> -->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, molestias maxime incidunt facilis libero alias inventore optio hic similique harum ipsam cupiditate vitae veniam obcaecati quis deserunt vel impedit dolores?
+              Accusantium officiis dicta unde laborum! Totam maxime ipsa tenetur omnis incidunt et, nostrum quidem recusandae sunt architecto accusantium est nulla? Mollitia enim sapiente quam voluptate alias sit cumque repellat perspiciatis.
+              Ea ducimus quae sapiente ipsum consequatur vel consectetur ullam minus voluptatibus fugit voluptatum pariatur cum minima et architecto animi quo quasi ad accusantium, qui sint delectus dignissimos? Saepe, eos totam!
+              Dignissimos vel laudantium odio maxime quos consequuntur, incidunt voluptatum quis cumque tenetur adipisci ipsam sed ratione nesciunt. Ab architecto recusandae beatae sit facere quibusdam soluta, dicta est quo, eveniet quae!
+              Perspiciatis quia deserunt beatae, ex, commodi sint explicabo modi dignissimos consequuntur placeat excepturi, exercitationem eum. Natus vero nihil sed alias voluptate tempora facilis? Dignissimos reprehenderit impedit ipsum quaerat doloribus culpa.
+            </p>
+            <a href="" class="seeMoreBtn">Кўпроқ маълумотга эга булиш</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mainInfoSection">
+      <div class="container-fluid">
+        <div class="row">
+          <h1>Perfect fit guarantee</h1>
+          <div class="container">
+            <p>
+              Tailor Store proudly brings you the ultimate experience in confidence, comfort and peace of mind. <br>
+              If you are not satisfied with the fit of your garment we will adjust and replace it for free. No returns needed.
+            </p>
+            <div class="d-flex justify-content-center">
+              <a href="" class="mainMoreBtn">Кўпроқ ўқинг</a>
+            </div>
+          </div>
+        </div>
+        <div class="row styleTypes">
+          <div class="col-md-4 col-sm-4">
+            <div class="styleTypeBlock">
+              <img src="data/images/SMBS008_142-499x569.jpg" alt="">
+              <a href="">Bussines</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="styleTypeBlock">
+              <img src="data/images/NAVY-SHIRT_225_1-navy-cashmerello-2bc-slim-fit-flat-front-shirt.jpg-499x569.jpg" alt="">
+              <a href="">Casual</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="styleTypeBlock">
+              <img src="data/images/V022083_45-499x569.jpg" alt="">
+              <a href="">Bussines casual</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- instagram section -->
+    <section class="instaSection">
+      <div class="container-fluid">
+        <div class="row">
+          <h2>Бизни инстаграмда кузатиб боринг</h2>
+        </div>
+        <div class="row">
+          <div class="instaBlocks">
+            <div class="overlay"></div>
+            <a href="">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quisquam at labore quod atque omnis recusandae maiores, totam earum deserunt consectetur aspernatur non quam nam, neque molestiae, alias possimus laudantium?
+              <br><br>
+              <p>photo by @phoenix</p>
+            </a>
+            <img src="data/images/NAVY-SHIRT_225_1-navy-cashmerello-2bc-slim-fit-flat-front-shirt.jpg-499x569.jpg" alt="">
+          </div>
+          <div class="instaBlocks">
+            <div class="overlay"></div>
+            <a href="">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quisquam at labore quod atque omnis recusandae maiores, totam earum deserunt consectetur aspernatur non quam nam, neque molestiae, alias possimus laudantium?
+              <br><br>
+              <p>photo by @phoenix</p>
+            </a>
+            <img src="data/images/WHITE-SINGLE-C-SHIRT_06_1-499x569.jpg" alt="">
+          </div>
+          <div class="instaBlocks">
+            <div class="overlay"></div>
+            <a href="">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quisquam at labore quod atque omnis recusandae maiores, totam earum deserunt consectetur aspernatur non quam nam, neque molestiae, alias possimus laudantium?
+              <br><br>
+              <p>photo by @phoenix</p>
+            </a>
+            <img src="data/images/V022083_45-499x569.jpg" alt="">
+          </div>
+          <div class="instaBlocks">
+            <div class="overlay"></div>
+            <a href="">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quisquam at labore quod atque omnis recusandae maiores, totam earum deserunt consectetur aspernatur non quam nam, neque molestiae, alias possimus laudantium?
+              <br><br>
+              <p>photo by @phoenix</p>
+            </a>
+            <img src="data/images/SMBS008_142-499x569.jpg" alt="">
+          </div>
+          <div class="instaBlocks">
+            <div class="overlay"></div>
+            <a href="">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quisquam at labore quod atque omnis recusandae maiores, totam earum deserunt consectetur aspernatur non quam nam, neque molestiae, alias possimus laudantium?
+              <br><br>
+              <p>photo by @phoenix</p>
+            </a>
+            <img src="data/images/LIGHT-GREY-SHIRT_237_1-Grey-Cashmerello-2BC-Slim-FIt-Flat-Front-Shirt-499x569.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- how it's work section -->
+    <section class="howWorks">
+      <div class="container">
+        <div class="row">
+          <h1>How it works</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="data/images/icons/layers.svg" alt="layers">
+            <h5>
+              1.Choose style
+            </h5>
+            <h6>
+              Choose a shirt from the models, or any shirt fabric.
+            </h6>
+          </div>
+          <div class="col-md-3">
+            <img src="data/images/icons/edit.svg" alt="layers">
+            <h5>
+              2.Customize
+            </h5>
+            <h6>
+              Customize your shirt.
+            </h6>
+          </div>
+          <div class="col-md-3">
+            <img src="data/images/icons/size.svg" alt="layers">
+            <h5>
+              3.Size:me
+            </h5>
+            <h6>
+              Choose a shirt from the models, or any shirt fabric.
+            </h6>
+          </div>
+          <div class="col-md-3">
+            <img src="data/images/icons/order.svg" alt="layers">
+            <h5>
+              4.Order
+            </h5>
+            <h6>
+              Our experienced tailors cut and make your new shirt.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <h4>Биз билан алока қилиш</h4>
+        </div>
+        <div class="row upperFooter">
+          <div class="col-md-3 col-sm-3">
+            <p><i class="fa fa-map-o" aria-hidden="true"></i> г. Ташкент, ул. Уста Ширин 100</p>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <p><i class="fa fa-phone" aria-hidden="true"></i> +998(99) 999-99-99</p>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> shirtstore@company.com</p>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <p><i class="fa fa-globe" aria-hidden="true"></i> shirtstore.com</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row bottomFooter">
+          <div class="col-md-3">
+            <div class="topbar-social">
+              <a href="#" class="topbar-social-item fa fa-facebook"></a>
+              <a href="#" class="topbar-social-item fa fa-instagram"></a>
+              <a href="#" class="topbar-social-item fa fa fa-telegram"></a>
+              <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>Copyright © 2003-2019 shirtShop. All rights reserved.
+              All works are property of their respective owners and may not be used elsewhere without written permission.</p>
+          </div>
+          <div class="col-md-3">
+            <h1><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-paypal" aria-hidden="true"></i></h1>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+  <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+  <script>
+		$(document).ready(function () {
+      $('body').on('click', '.block2-btn-addcart', function () {
+        swal({
+          type: 'success',
+          title: 'Маҳсулот',
+          text: 'саватчага қўшилди',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      });
+    });
+  </script>
 </body>
 </html>
