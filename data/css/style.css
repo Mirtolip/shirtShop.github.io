@@ -516,6 +516,8 @@ a {
   text-align: center !important;
 }
 .footer .bottomFooter .topbar-social {
+  display: -moz-inline-stack;
+  display: -webkit-inline-box;
   display: inline-block !important;
   text-align: center !important;
   padding: 0;
